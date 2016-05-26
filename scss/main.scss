@@ -1,0 +1,408 @@
+// Bootstrap Variables
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+//Variables
+@import "variables";
+
+// Install Bootstrap
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  background: #fff url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative; //for absolutely positioned child
+  &.wrapper:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $bg-tint-gray;
+  }
+}
+
+.header {
+  color: white;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.social {
+  float: right;
+}
+
+.subscribe {
+  color: white;
+  text-decoration: none;
+}
+
+.dots1 {
+  position: relative;
+}
+
+.dots {
+  display: block;
+  transform: rotate(90deg);
+  transform-origin: left;
+  position: absolute;
+  top: -40px;
+  right: -10px;
+}
+
+.social ul li {
+  display: inline-block;
+}
+
+.fbimg,
+.rssimg,
+.twittimg,
+.tubeimg {
+  max-height: 40px;
+  border-bottom: 2px solid $border-gray;
+}
+
+.fb1,
+.rss1,
+.twitt1,
+.tube1 {
+  position:relative;
+}
+
+.tint {
+  content:"";
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-height: 40px;
+}
+
+.fb1:after {
+  @extend .tint;
+  background-color: $fb-blue;
+}
+
+.rss1:after {
+  @extend .tint;
+  background-color: $rss-orange;
+}
+
+.twitt1:after {
+  @extend .tint;
+  background-color: $twitt-blue;
+}
+
+.tube1:after {
+  @extend .tint;
+  background-color: $tube-red;
+}
+
+.fb1:hover:after,
+.rss1:hover:after,
+.twitt1:hover:after,
+.tube1:hover:after {
+  display: none;
+}
+
+.rss1,
+.twitt1,
+.tube1 {
+  margin-left: 10px;
+}
+
+.main-nav {
+  text-decoration: none;
+}
+
+.nav {
+  text-align: center;
+  padding: 0;
+  span{
+    color: white;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+
+.nav1 {
+  display: block;
+  background-color: $nav-red;
+  border-bottom: 2px solid $border-gray;
+  padding: 10px 0;
+}
+
+.nav-1,
+.nav-2,
+.nav-3 {
+  padding-right: 15px;
+}
+
+.photo {
+  background-image: url('../images/top-image.png');
+  background-size: cover;
+  max-height: 300px;
+  line-height: 300px;
+  margin-top: 20px;
+  border: 6px solid $white;
+  position: relative;
+  &:before {
+    content:"";
+    background-image: url('../images/grid.png');
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.logo {
+  position: relative;
+  max-width: 350px;
+}
+
+.carousel {
+  font-size: 13px;
+  margin: 20px 0;
+  a {
+    text-align: center;
+    color: red;
+    display: block;
+  }
+}
+
+.car1,
+.car2,
+.car3 {
+  background-color: $white;
+  border-radius: 2px;
+  padding: 10px 20px 10px 20px;
+  height: 330px;
+
+  p {
+    margin-top: 10px;
+    line-height: 20px;
+  }
+}
+
+.car-1 {
+  padding: 0 5px 0 0;
+}
+
+.car-2 {
+  padding: 0 0 0 0;
+}
+
+.car-3 {
+  padding: 0 0 0 5px;
+}
+
+.boards {
+  margin-top: 20px;
+  background-color: $white;
+  img {
+    max-width: 9%;
+    text-align: center;
+    height: 300px;
+    margin-left: 19px;
+  }
+}
+
+.skaters {
+  margin-top: 20px;
+  h1 {
+    height: 175px;
+    padding-top: 50px;
+    font-family: helvetica, bold;
+  }
+}
+
+.skater-4 h1{
+  height: 400px;
+  margin-top: 100px;
+  margin-bottom: -70px;
+}
+
+.skater-1,
+.skater-2,
+.skater-3 {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.skater-3 {
+  padding-top: 10px;
+}
+
+.skater-4 {
+  padding-right: 0;
+}
+
+.skater-1,
+.skater-2,
+.skater-3,
+.skater-4 {
+  position: relative;
+}
+
+.lance {
+  background-image:  url('../images/sk8er-4.png');
+  border: 5px solid $white;
+  max-width: 100%;
+  background-size: 140%;
+  color: $white;
+  text-align: center;
+  padding-right: 10px;
+  background-position: top right, 0 0;
+  position: relative;
+}
+
+#base {
+  background: $nav-red;
+  display: inline-block;
+  height: 80px;
+  position: absolute;
+  width: 180px;
+  color: $white;
+  line-height: 80px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 20px;
+  left: -210px;
+  top: 70px;
+  border-bottom: 2px solid $border-gray;
+}
+#base:before {
+  border-bottom: 40px solid transparent;
+  border-left: 30px solid $nav-red;
+  border-top: 40px solid transparent;
+  content: "";
+  height: 0;
+  left: 180px;
+  position: absolute;
+  top: 0px;
+  width: 0;
+
+}
+
+.rodney {
+  background-image: url('../images/sk8er-3.png');
+  border: 5px solid $white;
+  max-width: 100%;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+}
+
+.steve {
+  background-image: url('../images/sk8er-1.png');
+  border: 5px solid $white;
+  max-width: 100%;
+  background-size: 110%;
+  color: $white;
+  text-align: center;
+  background-position: 0 -70px;
+}
+
+.tommy {
+  background-image: url('../images/sk8er-2.png');
+  border: 5px solid $white;
+  max-width: 100%;
+  background-size: 260%;
+  color: $white;
+  text-align: center;
+  background-position: 420px 0;
+}
+
+.skaters-left{
+  padding: 0;
+}
+
+.skaters-right {
+  padding: 0;
+}
+
+.contact {
+  margin-top: 20px;
+  background-color: $white;
+  height: 290px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  p{
+  line-height: 24px;
+  }
+}
+
+.contact1 {
+  padding-top: -10px;
+}
+
+#exampleInputEmail1 {
+  width: 435px;
+}
+
+#exampleInputPassword1 {
+  width: 435px;
+}
+
+#exampleInputFile {
+  height: 108px;
+  width: 435px;
+}
+ form {
+   float: right;
+   padding-top: 10px;
+   .btn {
+     float: right;
+     border-radius: 0px;
+     width: 50%;
+     background-color: $nav-red;
+     color: $white;
+   }
+ }
+
+ @media (max-width: 768px){
+   .nav-4 {
+     padding-right: 15px;
+   }
+
+   .skater-2 {
+     padding-top: 10px;
+   }
+   .skater-4 {
+     padding-top: 10px;
+   }
+
+   .steve {
+     background-image: url('../images/sk8er-1.png');
+     border: 5px solid $white;
+     max-width: 100%;
+     background-size: cover;
+     color: $white;
+     text-align: center;
+     }
+
+    .baord1,
+    .board2,
+    .board3 {
+       margin: 0;
+     }
+
+     .contact {
+       height: 500px;
+     }
+ }
