@@ -5820,7 +5820,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
-  .wrapper.wrapper:before {
+  .wrapper:before {
     content: "";
     position: absolute;
     top: 0;
@@ -5831,8 +5831,11 @@ ul {
 
 .header {
   color: white;
-  line-height: 50px;
-  text-decoration: none; }
+  line-height: 50px; }
+  .header a {
+    text-decoration: none; }
+  .header a:hover {
+    color: white; }
 
 .social {
   float: right; }
@@ -5933,6 +5936,7 @@ ul {
   .photo:before {
     content: "";
     background-image: url("../images/grid.png");
+    opacity: .6;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -5942,6 +5946,9 @@ ul {
 .logo {
   position: relative;
   max-width: 350px; }
+
+.circles {
+  height: 20px; }
 
 .carousel {
   font-size: 13px;
@@ -5972,15 +5979,6 @@ ul {
 
 .car-3 {
   padding: 0 0 0 5px; }
-
-.boards {
-  margin-top: 20px;
-  background-color: white; }
-  .boards img {
-    max-width: 9%;
-    text-align: center;
-    height: 300px;
-    margin-left: 19px; }
 
 .skaters {
   margin-top: 20px; }
@@ -6081,12 +6079,31 @@ ul {
 .skaters-right {
   padding: 0; }
 
+.boards {
+  margin-top: 20px;
+  background-color: white;
+  z-index: 5;
+  position: relative; }
+  @media (max-width: 768px) {
+    .boards {
+      margin: 20px auto; } }
+  .boards img {
+    margin-left: 4%; }
+    @media (max-width: 768px) {
+      .boards img {
+        display: block;
+        transform: rotate(90deg);
+        padding-left: 20px;
+        margin-bottom: 100px; } }
+
 .contact {
   margin-top: 20px;
   background-color: white;
   height: 290px;
   margin-bottom: 20px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  position: relative;
+  z-index: 5; }
   .contact p {
     line-height: 24px; }
 
@@ -6130,11 +6147,6 @@ form {
     background-size: cover;
     color: white;
     text-align: center; }
-
-  .baord1,
-  .board2,
-  .board3 {
-    margin: 0; }
 
   .contact {
     height: 500px; } }

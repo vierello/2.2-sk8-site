@@ -21,7 +21,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   position:relative; //for absolutely positioned child
-  &.wrapper:before{
+  &:before{
     content:"";
     position: absolute;
     top: 0;
@@ -35,7 +35,12 @@ ul {
 .header {
   color: white;
   line-height: 50px;
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color:white;
+  }
 }
 
 .social {
@@ -162,6 +167,7 @@ ul {
   &:before {
     content:"";
     background-image: url('../images/grid.png');
+    opacity: .6;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -173,6 +179,11 @@ ul {
 .logo {
   position: relative;
   max-width: 350px;
+}
+
+.circles {
+  height: 20px;
+
 }
 
 .carousel {
@@ -209,17 +220,6 @@ ul {
 
 .car-3 {
   padding: 0 0 0 5px;
-}
-
-.boards {
-  margin-top: 20px;
-  background-color: $white;
-  img {
-    max-width: 9%;
-    text-align: center;
-    height: 300px;
-    margin-left: 19px;
-  }
 }
 
 .skaters {
@@ -336,12 +336,34 @@ ul {
   padding: 0;
 }
 
+.boards {
+  margin-top: 20px;
+  background-color: $white;
+  z-index: 5;
+  position: relative;
+  @media (max-width:768px) {
+    margin: 20px auto;
+  }
+  img {
+    //max-width: 10%;
+    margin-left: 4%;
+    @media (max-width:768px) {
+      display: block;
+      transform: rotate(90deg);
+      padding-left: 20px;
+      margin-bottom: 100px;
+    }
+  }
+}
+
 .contact {
   margin-top: 20px;
   background-color: $white;
   height: 290px;
   margin-bottom: 20px;
   padding-top: 10px;
+  position: relative;
+  z-index: 5;
   p{
   line-height: 24px;
   }
@@ -394,12 +416,6 @@ ul {
      background-size: cover;
      color: $white;
      text-align: center;
-     }
-
-    .baord1,
-    .board2,
-    .board3 {
-       margin: 0;
      }
 
      .contact {
