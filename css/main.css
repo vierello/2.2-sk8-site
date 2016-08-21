@@ -6086,15 +6086,17 @@ ul {
   position: relative; }
   @media (max-width: 768px) {
     .boards {
-      margin: 20px auto; } }
+      margin: 20px auto;
+      height: auto; } }
   .boards img {
     margin-left: 4%; }
     @media (max-width: 768px) {
       .boards img {
         display: block;
         transform: rotate(90deg);
-        padding-left: 20px;
-        margin-bottom: 100px; } }
+        margin-bottom: -100px;
+        height: auto;
+        margin-left: 180px; } }
 
 .contact {
   margin-top: 20px;

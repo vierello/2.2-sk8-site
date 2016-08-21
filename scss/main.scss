@@ -341,17 +341,22 @@ ul {
   background-color: $white;
   z-index: 5;
   position: relative;
+
   @media (max-width:768px) {
     margin: 20px auto;
+    height: auto;
   }
+
   img {
-    //max-width: 10%;
     margin-left: 4%;
+
     @media (max-width:768px) {
       display: block;
       transform: rotate(90deg);
-      padding-left: 20px;
-      margin-bottom: 100px;
+      margin-bottom: -100px;
+      height: auto;
+      margin-left: 180px;
+
     }
   }
 }
